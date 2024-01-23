@@ -35,6 +35,6 @@ Navigate to the repository directory, and select the folder app for installation
 Ensure that the extension is enabled, and if so, the extension has been successfully installed!
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-REFERENCE:
+# REFERENCE:
 
 Mathur, A., Acar, G., Friedman, M. J., Lucherini, E., Mayer, J., Chetty, M., & Narayanan, A. (2019). Dark Patterns at Scale: Findings from a Crawl of 11K Shopping Websites. Proceedings of the ACM on Human-Computer Interaction, 3(CSCW), 81.
