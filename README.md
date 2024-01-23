@@ -7,7 +7,7 @@ Griffin, a Chrome extension, detects and highlights dark patterns on shopping we
 
 ![newui_after](https://github.com/Harris2621/griffin/assets/144410689/753673c8-92cd-4e95-b921-4db5fb822d41)
 
-WHAT IS DARK PATTERNS?
+WHAT are DARK PATTERNS?
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Dark patterns refer to deceptive design techniques employed in user interfaces to manipulate users into taking actions they may not otherwise choose to do. These patterns are often used to trick, coerce, or mislead users, typically for the benefit of a website or service, at the expense of user experience and autonomy.To know more about dark patterns and its approach refer the site https://en.wikipedia.org/wiki/Dark_pattern
