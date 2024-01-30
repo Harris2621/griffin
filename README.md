@@ -8,7 +8,7 @@ Griffin, a Chrome extension, detects and highlights dark patterns on shopping we
 
 
 
-https://github.com/Harris2621/griffin/assets/103132348/275f72cf-bec2-4b8d-80ef-4861323be4a5
+
 
 
 
