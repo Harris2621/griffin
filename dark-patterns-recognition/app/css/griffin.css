@@ -1,12 +1,9 @@
-.griffin-highlight {
-    position: relative;
-    background: #F7E660;
-}
 
-.griffin-highlight .griffin-highlight-body {
+
+ .griffin-highlight-body {
     font-size: 12px;
     font-weight: 150;
-
+    border-color: red;
     margin: 0;
   	width: 200px;
     color: #FFFFFF;
@@ -23,7 +20,7 @@
 	transition: opacity 0.3s ease;
 }
 
-.griffin-highlight-body .modal-header {
+.modal-header {
     align-items: center;
     text-align: center;
     box-shadow: 0px 3px 2px -1px #00131f;
@@ -31,7 +28,7 @@
     padding: 3px;
 }
 
-.griffin-highlight-body .modal-header h1 {
+.modal-header h1 {
     color: #FFFFFF;
 
     font-size: 16px;
@@ -39,11 +36,11 @@
     margin: 0;
 }
 
-.griffin-highlight-body .modal-content {
+.modal-content {
     padding: 8px 16px 8px 16px;
     font-size: 12px;
     font-weight: 150;
-    color: #D8D8D8;
+    color: #000;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
