@@ -4,8 +4,13 @@ Griffin, a Chrome extension, detects and highlights dark patterns on shopping we
 
 
 
+![Screenshot 2024-01-30 213814](https://github.com/Harris2621/griffin/assets/103132348/c0094edc-6953-4011-b401-ee2e0ec448a9)
 
-![newui_after](https://github.com/Harris2621/griffin/assets/144410689/753673c8-92cd-4e95-b921-4db5fb822d41)
+
+
+https://github.com/Harris2621/griffin/assets/103132348/275f72cf-bec2-4b8d-80ef-4861323be4a5
+
+
 
 WHAT are DARK PATTERNS?
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
