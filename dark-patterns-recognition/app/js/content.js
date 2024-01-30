@@ -74,10 +74,9 @@ function scrape() {
 }
 
 function highlight(element, type) {
-  element.classList.add("griffin-highlight");
-
-  let body = document.createElement("span");
-  body.classList.add("griffin-highlight-body");
+  element.style.border="4px solid red";
+  
+  
 
   /* header */
   let header = document.createElement("div");
@@ -85,15 +84,18 @@ function highlight(element, type) {
   let headerText = document.createElement("h1");
   headerText.innerHTML = type + " Pattern";
   header.appendChild(headerText);
-  body.appendChild(header);
+  element.appendChild(header);
 
   /* content */
   let content = document.createElement("div");
   content.classList.add("modal-content");
   content.innerHTML = descriptions[type];
-  body.appendChild(content);
+  element.appendChild(content);
 
-  element.appendChild(body);
+  setTimeout(() => {
+    element.removeChild(header);
+    element.removeChild(content);
+  }, 10000);
 }
 
 function sendDarkPatterns(number) {
