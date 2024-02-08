@@ -1,11 +1,19 @@
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function() {
   chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
     chrome.tabs.sendMessage(tabs[0].id, { message: "popup_open" });
   });
 
   document.getElementsByClassName("analyze-button")[0].onclick = function () {
+    console.log("clicked");
     chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
       chrome.tabs.sendMessage(tabs[0].id, { message: "analyze_site" });
+    });
+  };
+
+  document.getElementsByClassName("take-ss")[0].onclick = function () {
+    console.log("clickedss");
+    chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+      chrome.tabs.sendMessage(tabs[0].id, { message: "screenshot",url:tabs[0].url });
     });
   };
 
@@ -14,7 +22,7 @@ window.onload = function () {
       url: document.getElementsByClassName("link")[0].getAttribute("href"),
     });
   };
-};
+});
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.message === "update_current_count") {
