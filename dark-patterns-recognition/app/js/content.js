@@ -8,9 +8,32 @@ const descriptions = {
   "Obstruction": "Tries to make an action more difficult so that a user is less likely to do that action.",
   "Forced Action": "Forces a user to complete extra, unrelated tasks to do something that should be simple.",
 };
-const categories=['Social Proof', 'Misdirection' ,'Urgency' ,,'Forced Action', 'Obstruction',
+const categories=['Social Proof', 'Misdirection' ,'Urgency' ,'Forced Action', 'Obstruction',
 'Sneaking', 'Scarcity']
+function ocr(Url)
+{
+  console.log("called ocr")
+  fetch(`${endpoint}/ocr`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ url: Url }),
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Handle the OCR result data here
+    console.log(data);
+  })
+  .catch(error => {
+    // Handle errors here
+    console.error('There was a problem with the OCR request:', error);
+  });
 
+}
 function scrape() {
   // website has already been analyzed
   if (document.getElementById("griffin_count")) {
@@ -107,11 +130,18 @@ function sendDarkPatterns(number) {
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.message === "analyze_site") {
+    console.log("called")
     scrape();
   } else if (request.message === "popup_open") {
     let element = document.getElementById("griffin_count");
+    
     if (element) {
       sendDarkPatterns(element.value);
     }
+  }
+  else if(request.message === "screenshot")
+  {
+    console.log("listened ss")
+    ocr(request.url)
   }
 });
